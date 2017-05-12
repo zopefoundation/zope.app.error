@@ -12,8 +12,6 @@
 #
 ##############################################################################
 """Define view component for event utility control.
-
-$Id$
 """
 from zope.component import getUtility
 from zope.publisher.browser import BrowserView

@@ -2,10 +2,10 @@
 CHANGES
 =======
 
-3.5.4 (unreleased)
+4.0.0 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add support for Python 3.4, 3.5, 3.6 and PyPy.
 
 
 3.5.3 (2010-09-01)
@@ -28,7 +28,7 @@ CHANGES
 
 - Use zope.ManageServices permission instead of zope.ManageContent
   for errorRedirect view and menu item, because all IErrorReportingUtility
-  views are registered for zope.ManageServices as well. 
+  views are registered for zope.ManageServices as well.
 
 - Fix package's README.txt
 
