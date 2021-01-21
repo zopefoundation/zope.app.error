@@ -23,20 +23,25 @@ import zope.app.error.browser
 from zope.app.error.browser import EditErrorLog
 from zope.app.error.browser import ErrorRedirect
 
+
 class TestEditErrorLog(unittest.TestCase):
 
     def test_updateProperties(self):
         class Context(object):
             props = None
-            def setProperties(self, keep_entries, copy_to_zlog, ignored_exceptions):
+
+            def setProperties(
+                    self, keep_entries, copy_to_zlog, ignored_exceptions):
                 self.props = dict(locals())
                 del self.props['self']
 
         class Request(object):
             url = None
+
             @property
             def response(self):
                 return self
+
             def redirect(self, url):
                 self.url = url
 
@@ -50,6 +55,7 @@ class TestEditErrorLog(unittest.TestCase):
                           'ignored_exceptions': None,
                           'keep_entries': 'keep'})
         self.assertEqual(edit.request.url, '@@configure.html')
+
 
 class TestErrorRedirect(unittest.TestCase):
 
@@ -94,6 +100,7 @@ class TestErrorRedirect(unittest.TestCase):
                 return self
 
             root = None
+
             def getVirtualHostRoot(self):
                 return self.root
 

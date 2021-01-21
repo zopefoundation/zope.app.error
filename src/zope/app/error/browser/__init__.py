@@ -27,8 +27,7 @@ class EditErrorLog(object):
     def updateProperties(self, keep_entries, copy_to_zlog=None,
                          ignored_exceptions=None):
         errorLog = self.context
-        if copy_to_zlog is None:
-            copy_to_zlog = 0
+        copy_to_zlog = 0 if copy_to_zlog is None else copy_to_zlog
         errorLog.setProperties(keep_entries, copy_to_zlog, ignored_exceptions)
         return self.request.response.redirect('@@configure.html')
 
