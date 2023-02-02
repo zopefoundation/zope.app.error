@@ -14,8 +14,8 @@
 """Error Reporting Utility Tests
 """
 
-import unittest
 import doctest
+import unittest
 
 
 def test_suite():

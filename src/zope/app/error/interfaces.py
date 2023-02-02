@@ -15,5 +15,5 @@
 """
 
 # BBB
-from zope.error.interfaces import (IErrorReportingUtility,
-                                   ILocalErrorReportingUtility)
+from zope.error.interfaces import IErrorReportingUtility
+from zope.error.interfaces import ILocalErrorReportingUtility

@@ -17,8 +17,8 @@ This is a port of the Zope 2 error reporting object
 """
 
 # BBB
-from zope.error.error import (printedreplace,
-                              getFormattedException,
-                              ErrorReportingUtility,
-                              RootErrorReportingUtility,
-                              globalErrorReportingUtility)
+from zope.error.error import ErrorReportingUtility
+from zope.error.error import RootErrorReportingUtility
+from zope.error.error import getFormattedException
+from zope.error.error import globalErrorReportingUtility
+from zope.error.error import printedreplace

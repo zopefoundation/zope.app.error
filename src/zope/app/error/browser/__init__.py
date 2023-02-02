@@ -14,11 +14,10 @@
 """Define view component for event utility control.
 """
 from zope.component import getUtility
-from zope.publisher.browser import BrowserView
-from zope.traversing.browser.absoluteurl import absoluteURL
-
 from zope.error.interfaces import IErrorReportingUtility
 from zope.error.interfaces import ILocalErrorReportingUtility
+from zope.publisher.browser import BrowserView
+from zope.traversing.browser.absoluteurl import absoluteURL
 
 
 class EditErrorLog(object):

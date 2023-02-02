@@ -14,10 +14,9 @@
 
 import unittest
 
-
 from zope.component.testlayer import ZCMLFileLayer
-from zope.publisher.interfaces.http import IHTTPRequest
 from zope.interface import implementer
+from zope.publisher.interfaces.http import IHTTPRequest
 
 import zope.app.error.browser
 from zope.app.error.browser import EditErrorLog
