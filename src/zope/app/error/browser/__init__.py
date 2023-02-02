@@ -20,7 +20,7 @@ from zope.publisher.browser import BrowserView
 from zope.traversing.browser.absoluteurl import absoluteURL
 
 
-class EditErrorLog(object):
+class EditErrorLog:
     __used_for__ = ILocalErrorReportingUtility
 
     def updateProperties(self, keep_entries, copy_to_zlog=None,

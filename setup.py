@@ -67,6 +67,7 @@ setup(name='zope.app.error',
       url='http://github.com/zopefoundation/zope.app.error',
       packages=find_packages('src'),
       package_dir={'': 'src'},
+      python_requires='>=3.7',
       extras_require={
           'test': [
               'zope.testing',
