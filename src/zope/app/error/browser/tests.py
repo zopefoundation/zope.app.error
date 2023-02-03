@@ -14,10 +14,9 @@
 
 import unittest
 
-
 from zope.component.testlayer import ZCMLFileLayer
-from zope.publisher.interfaces.http import IHTTPRequest
 from zope.interface import implementer
+from zope.publisher.interfaces.http import IHTTPRequest
 
 import zope.app.error.browser
 from zope.app.error.browser import EditErrorLog
@@ -27,7 +26,7 @@ from zope.app.error.browser import ErrorRedirect
 class TestEditErrorLog(unittest.TestCase):
 
     def test_updateProperties(self):
-        class Context(object):
+        class Context:
             props = None
 
             def setProperties(
@@ -35,7 +34,7 @@ class TestEditErrorLog(unittest.TestCase):
                 self.props = dict(locals())
                 del self.props['self']
 
-        class Request(object):
+        class Request:
             url = None
 
             @property
@@ -65,7 +64,7 @@ class TestErrorRedirect(unittest.TestCase):
     def test_action_type_error(self):
 
         @implementer(IHTTPRequest)
-        class Request(object):
+        class Request:
             url = None
 
             @property
@@ -92,7 +91,7 @@ class TestErrorRedirect(unittest.TestCase):
         from zope.error.interfaces import IErrorReportingUtility
 
         @implementer(IHTTPRequest)
-        class Request(object):
+        class Request:
             url = None
 
             @property
